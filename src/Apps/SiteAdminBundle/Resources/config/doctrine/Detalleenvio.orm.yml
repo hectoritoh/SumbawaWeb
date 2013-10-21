@@ -1,0 +1,48 @@
+Apps\SiteAdminBundle\Entity\Detalleenvio:
+    type: entity
+    table: detalleenvio
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        nombre:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+        calle:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+        departamento:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+        ciudad:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+        provincia:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+        region:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+        codigoPostal:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: codigo_postal
+    lifecycleCallbacks: {  }

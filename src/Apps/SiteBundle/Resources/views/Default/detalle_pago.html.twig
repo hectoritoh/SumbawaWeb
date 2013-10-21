@@ -1,0 +1,153 @@
+
+
+{%  extends "AppsSiteBundle:Template:template.html.twig" %}
+
+  {%  block contenido_top %}
+
+
+  {% endblock %}
+
+  {%  block carrousel %}
+    
+                            
+  {% endblock %}
+
+  {%  block contenido_mid %}
+<label style="font-family: fon_banner !important;font-size: 32px;color: #006dcc; margin-bottom: 0px;width: 60%;">DETALLE DEL PAGO</label>
+<div style="padding: 10px 10px 0px 0px">
+    <ul class="nav nav-pills">
+        <li ><a href="#">DESCRIPCION DEL ENVIO</a></li>
+        <li ><a href="#">PAGO</a></li>
+        <li ><a href="#">LISTO</a></li>
+    </ul>
+</div>
+
+    <div class="row">
+        
+        <div class="span10">                
+            <div class="row" style="margin-left: 20px;">
+                
+                <div class="span7 pull-left" style="text-align:center;margin-left: 0px;position: relative;margin-top: 0px;">
+                    
+
+                        <form class="form-horizontal span6">
+                        <fieldset>
+                                <legend>DESCRIPCION DEL PAGO</legend>
+
+                                <div class="control-group">
+                                        <label class="control-label">Nombre de tarjeta:</label>
+                                        <div class="controls">
+                                                <input type="text" class="input-block-level" pattern="\w+ \w+.*" title="Fill your first and last name" required>
+                                        </div>
+                                </div>
+
+                                <div class="control-group">
+                                        <label class="control-label">CVV:</label>
+                                        <div class="controls">
+                                                <div class="row-fluid">
+                                                        <div class="span3">
+                                                                <input type="text" class="input-block-level" autocomplete="off" maxlength="3" pattern="\d{3}" title="Three digits at back of your card" required>
+                                                        </div>
+                                                        <div class="span8">
+                                                                <!-- screenshot may be here -->
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                
+                                <div class="control-group">
+                                        <label class="control-label">Fecha de Vencimiento:</label>
+                                        <div class="controls">
+                                                <div class="row-fluid">
+                                                        <div class="span9">
+                                                                <select class="input-block-level">
+                                                                        <option>Enero</option>
+                                                                        <option>Febrero</option>
+                                                                        <option>Marzo</option>
+                                                                        <option>Abril</option>
+                                                                        <option>Mayo</option>
+                                                                        <option>Junio</option>
+                                                                        <option>Julio</option>
+                                                                        <option>Agosto</option>
+                                                                        <option>Septiembre</option>
+                                                                        <option>Octubre</option>
+                                                                        <option>Noviembre</option>
+                                                                        <option>Diciembre</option>
+                                                                </select>
+                                                        </div>
+                                                        <div class="span3">
+                                                                <select class="input-block-level">
+                                                                        <option>2013</option>
+                                                                        <option>2014</option>
+                                                                        <option>2015</option>
+                                                                        <option>2016</option>
+                                                                        <option>2017</option>
+                                                                        <option>2018</option>
+                                                                </select>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="control-group">
+                                        <label class="control-label">Numero de Tarjeta</label>
+                                        <div class="controls">
+                                                <div class="row-fluid">
+                                                        <div class="span3">
+                                                                <input type="text" class="input-block-level" autocomplete="off" maxlength="4" pattern="\d{4}" title="First four digits" required>
+                                                        </div>
+                                                        <div class="span3">
+                                                                <input type="text" class="input-block-level" autocomplete="off" maxlength="4" pattern="\d{4}" title="Second four digits" required>
+                                                        </div>
+                                                        <div class="span3">
+                                                                <input type="text" class="input-block-level" autocomplete="off" maxlength="4" pattern="\d{4}" title="Third four digits" required>
+                                                        </div>
+                                                        <div class="span3">
+                                                                <input type="text" class="input-block-level" autocomplete="off" maxlength="4" pattern="\d{4}" title="Fourth four digits" required>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                
+                                <div class="form-actions">
+                                        <button type="submit" class="btn btn-primary">Enviar</button>
+                                </div>
+                        </fieldset>
+                </form>
+                    
+                </div>
+                
+                <!-- panel derecho del carrito -->
+                <div class="span2 offset6" style="width: 245px; height:100%;position: absolute; padding-left: 0px; left: 288px; margin-left: 600px;"> 
+                        
+                    <div class="span7" style="margin-left: 0px;width:100%;z-index: 1">
+                        <div style="width: 250px;padding-top: 0px; height: 15px;background-image:url('../img/separador.png');background-repeat:repeat-x;">
+                        </div> 
+                        <!--fila de direcciones-->
+                        {%  include 'AppsSiteBundle:Template:item_direcciones.html.twig' %}
+
+                        <!--fila de direcciones-->
+                        {%  include 'AppsSiteBundle:Template:item_direcciones.html.twig' %}
+                        
+                    </div>
+                        <div class="span7" style="margin-left: 0px;z-index: 1">
+                            <br/><br/>
+                            <div style="width: 250px;padding-top: 0px; height: 15px;background-image:url('../img/separador.png');background-repeat:repeat-x;">
+                            </div>
+                        </div>                  
+                    
+                </div><!--/span-->
+            </div>
+
+                <br/>
+                <hr style="width: 100%"/>
+        </div><!--/span-->
+    </div><!--/row-->
+
+{% endblock %}
+
+
+
+{%  block contenido_bottom %}
+   
+{%  endblock %}

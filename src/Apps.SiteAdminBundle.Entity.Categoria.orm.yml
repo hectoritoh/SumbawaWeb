@@ -1,0 +1,30 @@
+Apps\SiteAdminBundle\Entity\Categoria:
+    type: entity
+    table: categoria
+    fields:
+        id:
+            type: integer
+            nullable: false
+            id: true
+            generator:
+                strategy: IDENTITY
+        name:
+            type: string
+            length: 255
+            nullable: true
+        imagen:
+            type: text
+            nullable: true
+        descripcion:
+            type: text
+            nullable: true
+        estado:
+            type: integer
+            nullable: true
+        created:
+            type: datetime
+            nullable: true
+        updated:
+            type: datetime
+            nullable: true
+    lifecycleCallbacks: {  }

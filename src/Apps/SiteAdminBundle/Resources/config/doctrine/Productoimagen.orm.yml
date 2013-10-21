@@ -1,0 +1,38 @@
+Apps\SiteAdminBundle\Entity\Productoimagen:
+    type: entity
+    table: productoimagen
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        url:
+            type: text
+            nullable: true
+        created:
+            type: datetime
+            nullable: true
+        updated:
+            type: datetime
+            nullable: true
+        estado:
+            type: integer
+            unsigned: false
+            nullable: true
+        descripcion:
+            type: text
+            nullable: true
+    manyToOne:
+        producto:
+            targetEntity: Producto
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                producto_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

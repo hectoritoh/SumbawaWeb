@@ -1,0 +1,36 @@
+Apps\SiteAdminBundle\Entity\Personal:
+    type: entity
+    table: personal
+    fields:
+        id:
+            type: integer
+            nullable: false
+            id: true
+            generator:
+                strategy: IDENTITY
+        nombre:
+            type: string
+            length: 255
+            nullable: true
+        estatura:
+            type: float
+            nullable: true
+        sponsor:
+            type: string
+            length: 255
+            nullable: true
+        anecdota:
+            type: text
+            nullable: true
+        edad:
+            type: integer
+            nullable: true
+        extra1:
+            type: string
+            length: 255
+            nullable: true
+        extra2:
+            type: string
+            length: 255
+            nullable: true
+    lifecycleCallbacks: {  }

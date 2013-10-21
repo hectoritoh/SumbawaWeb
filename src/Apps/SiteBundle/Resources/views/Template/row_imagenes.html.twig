@@ -1,0 +1,19 @@
+<div class="row-fluid" >
+
+
+    {%   for imagen in imagenes  %}
+
+    <div class="span3">
+        <a href="{{  path("verImagen" , { 'id_imagen' : imagen.id }) }}"  >
+            <ul style="list-style:none outside none; margin-left: 0px;">
+                <li  style="margin-left: 0px;">
+                    <h3 class="label_subtitulo_noticias">{{  imagen.titulo }}</h3>
+                    <img style="width: 100%;height: 133px" src="{{ asset('uploads/imagenes/'  ~  imagen.imagen   ) }}" alt="">                    
+                </li>
+            </ul>
+        </a>
+    </div>
+
+    {%   endfor %}
+
+</div>

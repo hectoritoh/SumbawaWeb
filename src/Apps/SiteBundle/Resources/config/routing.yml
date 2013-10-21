@@ -1,0 +1,164 @@
+apps_site_homepage:
+    pattern:  /home
+    defaults: { _controller: AppsSiteBundle:Default:index }
+
+
+
+
+home:
+    pattern:  /index
+    defaults: { _controller: AppsSiteBundle:Default:index }
+
+
+ver_subcategoria:
+    pattern:  /productos/{id_subcategoria}
+    defaults: { _controller: AppsSiteBundle:Default:listarProductos }
+
+tiendas:
+    pattern:  /tiendas/{id_tienda}
+    defaults: { _controller: AppsSiteBundle:Default:tiendas }
+
+noticias:
+    pattern:  /noticias
+    defaults: { _controller: AppsSiteBundle:Default:noticias }
+
+descripcion_noticia:
+    pattern:  /noticia/{id_noticia}
+    defaults: { _controller: AppsSiteBundle:Default:descripcionNoticias }
+
+descripcion_producto:
+    pattern:  /descripcion/{id_producto}
+    defaults: { _controller: AppsSiteBundle:Default:descripcionProductos }
+
+
+
+
+forecast:
+    pattern:  /forecast
+    defaults: { _controller: AppsSiteBundle:Default:forecast }
+
+
+about:
+    pattern:  /about
+    defaults: { _controller: AppsSiteBundle:Default:about }
+
+
+
+#media 
+
+
+imagenes:
+    pattern:  /imagenes
+    defaults: { _controller: AppsSiteBundle:Default:imagenes }
+
+verImagen:
+    pattern:  /imagenes/{id_imagen}
+    defaults: { _controller: AppsSiteBundle:Default:imagenesVer }
+
+videos:
+    pattern:  /videos
+    defaults: { _controller: AppsSiteBundle:Default:videos}
+
+verImagen:
+    pattern:  /imagenes/{id_imagen}
+    defaults: { _controller: AppsSiteBundle:Default:imagenesVer }
+
+
+
+# RUTAS DE TEAM 
+
+
+team:
+    pattern:  /team
+    defaults: { _controller: AppsSiteBundle:Default:team }
+
+
+descripcion_team:
+    pattern:  /team_descripcion/{id_persona}
+    defaults: { _controller: AppsSiteBundle:Default:descripcionteam }
+
+
+entrevista_team:
+    pattern:  /team_entrevista/{id_persona}
+    defaults: { _controller: AppsSiteBundle:Default:entrevistateam }
+
+
+fotos_team:
+    pattern:  /team_fotos
+    defaults: { _controller: AppsSiteBundle:Default:fotosteam }
+
+videos_team:
+    pattern:  /team_videos
+    defaults: { _controller: AppsSiteBundle:Default:videosteam }
+
+
+
+
+
+
+
+
+carrito_productos:
+    pattern:  /carrito
+    defaults: { _controller: AppsSiteBundle:Default:carritoProductos }
+
+detalle_envio:
+    pattern:  /envio
+    defaults: { _controller: AppsSiteBundle:Default:detalleDelEnvio }
+
+detalle_listo:
+    pattern:  /listo
+    defaults: { _controller: AppsSiteBundle:Default:detalleListo }
+
+
+
+
+
+
+
+
+
+
+media_fotos:
+    pattern:  /fotos
+    defaults: { _controller: AppsSiteBundle:Default:mediaFotos }
+
+descripcion_foto:
+    pattern:  /descripcion_foto
+    defaults: { _controller: AppsSiteBundle:Default:descripcionFoto }
+
+media_video:
+    pattern:  /videos
+    defaults: { _controller: AppsSiteBundle:Default:mediaVideo }
+
+
+
+
+
+
+forecast_team:
+    pattern:  /forecast
+    defaults: { _controller: AppsSiteBundle:Default:forecasteam }
+
+quienes_somos:
+    pattern:  /quienes
+    defaults: { _controller: AppsSiteBundle:Default:quienessomos }
+
+
+
+
+
+
+
+
+
+#CONTROLADORES DE SITE 
+
+
+slider:
+    pattern:  /slider
+    defaults: { _controller: AppsSiteBundle:Site:slider }
+
+categoria:
+    pattern:  /categorias
+    defaults: { _controller: AppsSiteBundle:Site:categorias }

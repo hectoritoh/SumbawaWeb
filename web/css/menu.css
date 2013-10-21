@@ -1,0 +1,212 @@
+@font-face {
+    font-family: fon_banner;
+    src: url('../fonts/BebasNeue.otf'); 
+}
+
+#top_submenu{
+    background-image: url(../img/submenu-bg.png);
+    border-bottom: 1px solid #cccccc ;
+}
+
+.top-menu {
+    /*background: #F2F8F7 !important;*/ 
+
+    font-family: fon_banner !important;
+    font-size: 18px !important;  
+    margin-top: 0px !important;  
+}
+
+.ul_menu{      
+    padding-left: 155px;  
+}
+
+.footer_copyright{
+    padding-right: 10%;
+}
+
+
+.normal_boton:hover, .normal_boton:active{
+    color: #1B3F95;
+    text-decoration: overline underline !important; 
+}
+
+
+.normal_boton{
+    padding-right: 35px;
+    font-family: fon_banner;
+}
+
+.links_footer{ 
+    font-family: "Arial" !important;
+    color: #909090;
+
+}
+
+.span_sumbawa{ 
+    font-family: fon_banner ;  
+    font-size: 22px ;  
+    color: #FFF;
+    font-weight: normal; 
+    letter-spacing: 1.3px;
+}
+
+
+.span_subtitulos_contenido{ 
+    font-family: fon_banner !important;  
+    font-size: 30px !important;  
+    color: #1B3F95;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+
+
+.label_subtitulo_noticias{
+    font-family: fon_banner !important;  
+    color: #333333 !important;
+    font-size: 20px;
+    margin: 0px;
+    font-weight: normal;
+    letter-spacing: 1.3px;
+}
+
+.label_subtitulo{
+    font-family: fon_banner !important;  
+    color: #333333 !important;
+    font-size: 20px;
+    padding-top: 5px;
+    text-decoration: none !important;
+}   
+.label_subtitulo_drop{
+    font-family: fon_banner !important;  
+    color: #333333 !important;
+    font-size: 20px;
+    padding: 5px;
+    text-decoration: none !important;
+} 
+
+
+#menu-productos{
+    background-color: transparent;
+    position: absolute;
+    z-index: 100;
+}
+
+#menu-productos-content{
+    background-color: transparent;   
+    border: 0px solid #cccccc;
+    border-top: 0px solid #cccccc;
+}
+
+.menu-prod-item-wrap ul {
+    margin-top: 25px;
+}
+
+.categorias-list{
+    /*margin-top: 25px !important;*/
+}
+
+.menu-prod-item-wrap{
+    border-left: 1px solid #cccccc;
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-left: 0px !important;
+    background-color: white;
+}
+
+.menu-prod-item-wrap:last-child{
+    border-right:  1px solid #cccccc;
+}
+
+.list-categorias{
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    text-align: left;
+}
+.list-categorias-ul{
+    list-style: none;
+}
+.subcategorias-list{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 0px !important;
+    list-style: none;
+}
+.categorias-list{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.categoria-img-thumb{
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 165px;
+    width: 85%;
+}
+
+
+.submenu-container {
+    background-color: transparent;
+}
+
+.submenu-item-link{
+    width: 100%;
+
+    display: block;
+}
+
+
+.personal-menu-item{
+    cursor: pointer;
+    font-size: 18px;
+    font-family: fon_banner;
+}
+
+.personal-menu-bar{
+    border-width: 0px !important;
+    padding-left: 0px;
+}
+
+li.activo > a {
+    color: #1b3f95 !important;
+}
+
+#perfil-link{
+    border-left-width: 0px;
+}
+
+.personal-menu{
+    margin-top: 10px;
+}
+
+li.personal-menu-item > a{
+    border-left: 1px solid #1b3f95;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.cat-nav{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.submenu-personal > a{
+    color: gray !important;
+    font-family: fon_banner !important;
+    font-size: 17px;
+    padding-left: 20px;
+}
+
+.submenu-personal {
+    color: gray !important;
+    font-family: fon_banner !important;
+    font-size: 17px;
+    padding-left: 20px;
+}
+
+.personal-active > a {
+    color:#1b3f95 !important;
+}

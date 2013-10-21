@@ -1,0 +1,84 @@
+{%  extends "AppsSiteBundle:Template:template.html.twig" %}
+
+  {%  block contenido_top %}
+
+
+  {% endblock %}
+
+  {%  block carrousel %}
+
+  {% endblock %}
+
+  {%  block contenido_mid %}
+    
+    <ul class="breadcrumb" style="background-color: white">
+        <li><a href="#">Home</a> <span class="divider">/</span></li>
+        <li><a href="#">Productos</a> <span class="divider">/</span></li>
+        <li><a href="#">Camiseta</a> <span class="divider">/</span></li>
+        <li><a href="#">Camiseta QuickSilver</a> <span class="divider">/</span></li>
+        <li class="active">Carrito</li>
+    </ul>
+    <div class="row">
+        
+        <div class="span10">
+            <div class="row" style="margin-left: 20px">
+                <label class="menu-productos" style="font-size: 30px;color: #006dcc">CAMISETAS</label>
+            </div>
+
+                
+            <div class="row" style="margin-left: 20px">
+                
+                <!--fila de producto en carrito-->
+                {%  include 'AppsSiteBundle:Template:item_carrito.html.twig' %}
+                <!--fila de producto en carrito-->
+                {%  include 'AppsSiteBundle:Template:item_carrito.html.twig' %}
+                
+                <!-- panel derecho del carrito -->
+                <div class="span2 offset6" style="width: 245px; position: absolute; padding-left: 0px; left: 288px; margin-left: 600px;"> 
+                        <div class="span7" style="width: 250px;padding-top: 0px;margin-left: 0px">              
+                            <label class="span1 label_subtitulo">SUBTOTAL</label>  
+                        </div>
+                        <div class="span7" style="margin-left: 0px">
+                            <div style="width: 250px;padding-top: 0px; height: 15px;background-image:url('../img/separador.png');background-repeat:repeat-x;">
+                            </div> 
+                        </div>
+                        
+                        <div class="span7" style="width: 250px;margin-left: 0px;margin-top: 20px">
+                            <label class="precio" id="precio" style="font-weight: bold;width: 35%;float: left">$200</label>
+                            <label style="font-size: 15px;font-weight: bold;font-family: Arial !important;margin-bottom: 30px;width: 50%;float: left">incluido IVA</label>
+                        </div>
+                        <div style="clear: both"></div>
+                        
+                        <div class="span7" style="width: 250px;margin-left: 0px;margin-top: 20px">
+                            <label style="font-family: Arial !important; margin-bottom: 0px;font-weight: bold;width: 60%;float: left">Items seleccionados:</label>
+                            <label style="font-size: 15px;font-weight: bold;font-family: Arial !important;margin-bottom: 30px;width: 20%;float: left" id="disponibilidad">2</label>
+                        </div>
+                        <div style="clear: both"></div>
+                        
+                        <!--label style="font-size: 15px;font-family: Arial !important; margin-bottom: 0px;"><b>Items seleccionados:</b></label>
+                        <label style="font-size: 15px;font-family: Arial !important;margin-bottom: 30px;" id="disponibilidad">2</label-->
+
+                        <a href="#" class="btn boton-agregar-carrito">C O N T I N U A R  LA  C O M P R A</a>
+
+                        <div class="span7" style="margin-left: 0px">
+                            <br/><br/>
+                            <div style="width: 250px;padding-top: 0px; height: 15px;background-image:url('../img/separador.png');background-repeat:repeat-x;">
+                            </div>
+                        </div>
+                        <a href="#" style="margin-top: 10px">Seguir comprando </a>                    
+                    
+                </div><!--/span-->
+            </div>
+
+                <br/>
+                <hr style="width: 100%"/>
+        </div><!--/span-->
+    </div><!--/row-->
+
+{% endblock %}
+
+
+
+{%  block contenido_bottom %}
+   
+{%  endblock %}

@@ -1,0 +1,14 @@
+<div class="row" style="margin-left: 10px;">
+    <div class="span4">
+        <ul style="list-style:none outside none; margin-left: 0px;position: relative">
+            
+            <li  style="margin-left: 0px;width: 250px">
+                <a  href="{{  path("descripcion_noticia",{id_noticia: noticia.id}) }}" >
+                <h3 class="label_subtitulo_noticias">{{  noticia.titulo }}</h3>
+                <h6 style="margin: 0px;color: #707070;font-family: Arial">{{  noticia.created |date('Y-m-d H:i:s') }}</h6>
+                <img style="width: 100%;height: 133px" src="{{  asset("uploads/noticias/" ~  noticia.imagen ) }}" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

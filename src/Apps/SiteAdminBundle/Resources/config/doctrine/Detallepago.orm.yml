@@ -1,0 +1,51 @@
+Apps\SiteAdminBundle\Entity\Detallepago:
+    type: entity
+    table: detallepago
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        nombreTarjeta:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+            column: nombre_tarjeta
+        ccv:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+        mesVence:
+            type: string
+            length: 20
+            fixed: false
+            nullable: true
+            column: mes_vence
+        anioVence:
+            type: string
+            length: 20
+            fixed: false
+            nullable: true
+            column: anio_vence
+        numeroTarjeta:
+            type: string
+            length: 50
+            fixed: false
+            nullable: true
+            column: numero_tarjeta
+        estado:
+            type: integer
+            unsigned: false
+            nullable: true
+        created:
+            type: datetime
+            nullable: true
+        updated:
+            type: datetime
+            nullable: true
+    lifecycleCallbacks: {  }

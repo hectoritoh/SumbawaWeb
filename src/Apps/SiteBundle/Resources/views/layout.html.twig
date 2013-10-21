@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta charset="UTF-8" /> 
+        <title>Sumbawa</title>
+        <link rel="stylesheet" href="{{  asset('css/bootstrap.css') }}"  ></link>
+         <link type="text/css"        href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css" rel="stylesheet" />
+        <link rel="stylesheet" href="{{  asset('css/bootstrap-responsive.css') }}"  ></link>
+        <link rel="stylesheet" href="{{  asset('css/style.css') }}"  ></link>
+        <link rel="stylesheet" href="{{  asset('css/menu.css') }}"  ></link>
+        <link rel="stylesheet" href="{{  asset('css/productos.css') }}"  ></link>
+        {%   block js %}
+
+        <script type="text/javascript"  src="{{  asset('js/jquery-1.9.1.js') }}" ></script>
+        <script type="text/javascript"  src="{{  asset('js/bootstrap.js') }}" ></script> 
+        <script type="text/javascript"  src="{{  asset('js/youtube.js') }}" ></script> 
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+        <script type="text/javascript"  src="{{  asset('js/script.js') }}" ></script> 
+        {%   endblock %}
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+
+     {%  block menu %}      
+     {%  include 'AppsSiteBundle:Menu:top.html.twig' %}      
+     {%  endblock %}
+
+     {%  block submenu %}    
+        {{ render(controller('AppsSiteBundle:Site:menu')) }}
+     {%  endblock %}
+
+
+        <div style="clear: both"></div>
+
+
+      {%   block carrousel  %}
+            {{ render(controller('AppsSiteBundle:Site:slider')) }}
+      {%   endblock %}
+
+
+        <br/>
+
+
+        <div class="container-fluid" style="padding: 100px; padding-top: 50px;">
+
+            {%  block contenido_top %}
+            <div class="row-fluid">
+                <div class="span11">
+                    <div class="row">
+                        <div class="span3 offset1"><img src="{{ asset('img/ban1.png') }}"/></div>
+                        <div class="span3" style="padding-left: 50px"><img src="{{ asset('img/ban2.png') }}"/></div>
+                        <div class="span3" style="padding-left: 50px"><img src="{{ asset('img/ban3.png') }}"/></div>
+                    </div>
+                </div>
+            </div>
+            {% endblock %}
+
+
+            {%  block contenido_mid %}
+
+            {% endblock %}
+
+
+         
+               {%  block contenido_bottom %}
+            <div class="row">
+
+                <h3 class="span10 offset1 span_subtitulos_contenido"><hr>NOTICIAS</h3>
+                <div class="span10 offset1" >
+
+
+                    <div class="row" >
+                        <div class="span3">
+                            <ul style="list-style:none outside none; margin-left: 0px;">
+                                <li  style="margin-left: 0px;">
+                                    <h3 class="label_subtitulo_noticias">Camisetas</h3>
+                                    <h6 style="margin: 0px;color: #707070;font-family: Arial">Lunes, 11 Marzo 2010 a la 13h30</h6>
+                                    <img style="width: 100%;height: 133px" src="{{ asset('img/cam1.png') }}" alt="">
+                                    <p>Nuestras camisetas son de las marcas mas reconocidas Quicksilver, VOlcom, Reef entre otras que llevan...</p>
+
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="span3" style="padding-left: 50px">
+                            <ul style="list-style:none outside none; margin-left: 0px;">
+                                <li   style="margin-left: 0px;">
+                                    <h3 class="label_subtitulo_noticias">Camisas</h3>
+                                    <h6 style="margin: 0px;color: #707070;font-family: Arial">Lunes, 11 Marzo 2010 a la 13h30</h6>
+                                    <img style="width: 100%;height: 133px" src="{{ asset('img/cam2.png') }}" alt="">
+                                    <p>Camisas de playa para eventos inoportunos y brindando la frescura del ambiente player en todo lugar..</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="span3" style="padding-left: 50px">
+                            <ul style="list-style:none outside none; margin-left: 0px;">
+                                <li   style="margin-left: 0px;">
+                                    <h3 class="label_subtitulo_noticias">Bermudas</h3>
+                                    <h6 style="margin: 0px;color: #707070;font-family: Arial">Lunes, 11 Marzo 2010 a la 13h30</h6>
+                                    <img style="width: 100%;height: 133px" src="{{ asset('img/cam3.png') }}" alt="" />
+                                    <p>El tipo de bermuda define tu vocacion en el surf o el skate ya puedes encontrar en nuestros locales la tuya...</p>
+                                </li>
+                            </ul>            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            {%  endblock %}
+
+        </div>
+
+
+
+    {%  block menufooter %}    
+        {%  include 'AppsSiteBundle:Template:template.menu.footer.html.twig' %}          
+    {%  endblock %}
+
+
+    {%  block footer %}
+        <footer>
+            <div class="span9" style="text-align: center; font-family: Arial; font-size: 10px; padding-top: 10px; padding-bottom: 10px;">
+                <div style="text-align: center ;font-family: Arial; font-size: 10px;">Copyright &COPY; 2013 Sumbawa Ecuador. All Right Reserved
+                    <div class="pull-right footer_copyright">
+                        <a href="#" class="icon_redes_foot"><img src="{{ asset('img/twf.png') }}"/></a>
+                        <a href="#" class="icon_redes_foot"><img src="{{ asset('img/fbf.png') }}"/></a>
+                    </div>      
+                </div>
+            </div>
+        </footer>
+    {%  endblock %}
+
+        <script type="text/javascript"  src="{{  asset('js/bootstrap-carousel.js') }}" ></script>
+        <script type="text/javascript"   >
+
+            $('.carousel').carousel();
+
+        </script>
+    </body>
+</html>

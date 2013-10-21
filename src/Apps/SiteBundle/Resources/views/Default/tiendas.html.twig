@@ -1,0 +1,92 @@
+{%  extends "AppsSiteBundle::layout.html.twig" %}
+ 
+  {%  block js %}
+  {{ parent() }}
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+        <script type="text/javascript"  src="{{  asset('js/google-maps.js') }}" ></script>
+  {% endblock %}
+
+
+  {%  block contenido_top %}
+  {% endblock %}
+
+   
+
+
+{%  block contenido_mid %}
+
+<div class="row-fluid">
+
+    <div  class="span10 offset1" >
+
+        <div  class="row-fluid" >
+
+
+            <div class="span2"  >
+
+                <div   style="width:100%">
+                    <div class="barra" ></div> 
+                    <ul class="nav">
+                {%  for tienda in tiendas  %}
+                        <li>
+                            <a href="{{  path("tiendas" , {"id_tienda": tienda.id }) }}" class="nav-header menu-productos  {% if tienda.id == selected.id %} selected_tienda {%  endif %} ">{{   tienda.nombre }}</a>
+                        </li>
+                        <li class="divider">
+                        </li>                    
+                {%  endfor  %}                 
+                    </ul>
+
+
+                </div>
+
+                <div class="barra" ></div>
+
+            </div><!--/span-->
+
+
+
+
+            <div class="span9 ">
+                 
+                <div class="row-fluid">
+                    <div class="span10" style="width: 100%">
+                        
+                        <label class="menu-productos" style="font-size: 25px;color: #006dcc; padding-bottom: 30px;">TIENDAS</label>
+                        
+                        
+                        <div id="map-canvas"></div>
+                        
+                        
+                         <div class="span10" style="text-align: left; margin-left: 0px;  padding-bottom: 30px; padding-top: 30px;">
+                    <div class="span7" style="width: 500px;padding-top: 20px;position: relative;">              
+                        <address>
+                            <h4 style="font-family: fon_banner !important;">{{ selected.nombre }}</h4>
+                            <strong>Direccion: </strong>{{ selected.direccion}}<br>
+                            <strong>Telefono: </strong>{{ selected.telefono }}<br>
+                            <strong>Centro comercial: </strong> {{  selected.email }}<br>
+                            <strong>Contacto: </strong> {{  selected.atencion }} <br>
+                            <div style="text-decoration: underline;padding-top: 10px">
+                                <a href="mailto:{{  selected.email }}">Contáctenos</a>
+                            </div>
+                        </address> 
+                    </div>
+                </div>
+                        
+                    </div>
+                </div>
+
+               
+                <br/>
+         
+            </div><!--/span-->
+        </div><!--/span-->
+    </div><!--/span-->
+</div><!--/row-->
+ 
+
+{% endblock %}
+
+
+
+{%  block contenido_bottom %} 
+{%  endblock %}

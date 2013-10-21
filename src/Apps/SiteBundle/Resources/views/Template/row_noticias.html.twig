@@ -1,0 +1,20 @@
+<div class="row-fluid" style="margin-bottom:  60px;" >    
+    {%   for noticia in noticias  %}
+
+    <div class="span4"  >
+        <a  href="{{  path("descripcion_noticia", {'id_noticia': noticia.id }) }}" >
+            <ul style="list-style:none outside none; margin-left: 0px;">
+                <li  style="margin-left: 0px;">
+                    <h3 class="label_subtitulo_noticias">{{  noticia.titulo }}</h3>
+                    <h6 style="margin: 0px;color: #707070;font-family: Arial">{{  noticia.created |date('Y-m-d H:i:s') }}</h6>
+                    <img style="width: 100%;height: 133px; " src="{{ asset('uploads/noticias/'  ~  noticia.imagen   ) }}" alt="">
+                    <p  style="color: black;" >{{  noticia.descripcion }}</p>
+                </li>
+            </ul>
+        </a>
+    </div>
+
+    {%   endfor %}
+
+     
+</div>

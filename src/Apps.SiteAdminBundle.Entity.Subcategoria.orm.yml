@@ -1,0 +1,40 @@
+Apps\SiteAdminBundle\Entity\Subcategoria:
+    type: entity
+    table: subcategoria
+    fields:
+        id:
+            type: integer
+            nullable: false
+            id: true
+            generator:
+                strategy: IDENTITY
+        nombre:
+            type: string
+            length: 255
+            nullable: false
+        imagen:
+            type: text
+            nullable: true
+        descripcion:
+            type: text
+            nullable: true
+        estado:
+            type: integer
+            nullable: true
+        created:
+            type: datetime
+            nullable: true
+        updated:
+            type: datetime
+            nullable: true
+    manyToOne:
+        categoria:
+            targetEntity: Apps\SiteAdminBundle\Entity\Categoria
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                categoria_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

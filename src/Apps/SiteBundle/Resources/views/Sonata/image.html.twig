@@ -1,0 +1,7 @@
+<th>{% block name %}{{ admin.trans(field_description.label) }}{% endblock %}</th>
+<td>
+    <img src="{{ asset( 'uploads/banners/' ~ object.imagen ) }}"  style="width: 50%;"  />
+    </br>
+    value 
+    {% block field %}{{ value|nl2br }}{% endblock %}
+</td>

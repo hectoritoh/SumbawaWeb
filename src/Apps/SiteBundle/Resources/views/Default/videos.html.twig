@@ -1,0 +1,77 @@
+{%  extends "AppsSiteBundle::layout.html.twig" %}
+
+
+
+  {%  block contenido_top %}
+  {% endblock %}
+
+  {%  block carrousel %}
+  {% endblock %}
+
+
+{%  block contenido_mid %}
+
+<div class="row-fluid">
+
+    <div  class="row-fluid" >
+
+        <div  class="span10 offset1" >
+            <div class="span2" >
+
+                <div class="barra" ></div> 
+                <ul class="nav">
+                    <li class="divider"></li>                    
+                    <li>
+                        <a   class="nav-header menu-productos    "  href="{{  path("imagenes") }}" >IMAGENES</a>
+                    </li>
+                    <li>
+                        <a   class="nav-header menu-productos selected_tienda"  href="{{  path("videos") }}" >VIDEOS</a>
+                    </li>
+                    <li class="divider"></li>                    
+                </ul>
+                <div class="barra" ></div> 
+
+            </div><!--/span-->
+            <div class="span10">
+                <div class="row-fluid">
+                    <div class="span10" style="width: 100%">
+                        <label class="menu-productos" style="font-size: 25px;color: #006dcc">Videos</label>
+                    </div>
+                </div>
+
+
+            {%  for i in 0 .. media | length / 3  %}
+
+
+            {{  include('AppsSiteBundle:Template:row_videos.html.twig'   , {'media': media | slice( i * 3 , 3  )  } ) }}
+
+           {% endfor %}
+
+
+
+
+
+                <div class="span10" style="text-align: left; margin-left: 0px;  padding-bottom: 30px; padding-top: 30px;">
+                    <div class="span7" style="width: 500px;padding-top: 20px;position: relative;margin-left: 10px">              
+
+                    </div>
+                </div>
+                
+                <br/>
+            
+            </div><!--/span-->
+        </div>
+
+  
+    </div>
+
+</div>
+
+
+{% endblock %}
+
+
+
+{%  block contenido_bottom %}
+
+{%  endblock %}

@@ -1,0 +1,23 @@
+<div class="sidebar-nav">
+    <div  class="barra" ></div>
+    <ul class="nav nav-list" >                
+        <li class="nav-header menu-productos">SURF</li>
+                {% for persona in personal %}
+        
+        {% if selected is not defined  %}
+     <li class="submenu-personal  ">
+            <a href="{{  path('descripcion_team' , { 'id_persona': persona.id }) }}">{{  persona.nombre }}</a>
+        </li>
+{% else %}
+        
+          <li class="submenu-personal   {% if persona.id == selected.id  %} personal-active {%endif%}">
+            <a href="{{  path('descripcion_team' , { 'id_persona': persona.id }) }}">{{  persona.nombre }}</a>
+        </li>
+{% endif %}
+        
+      
+                {% endfor  %}
+        <li class="nav-header  menu-productos">SKATE</li>
+    </ul>
+    <div  class="barra" ></div>
+</div>

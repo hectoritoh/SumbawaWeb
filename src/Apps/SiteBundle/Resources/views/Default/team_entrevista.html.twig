@@ -1,0 +1,71 @@
+{%  extends "AppsSiteBundle::layout.html.twig" %}
+{%   block carrousel  %}
+    <div style="width: 100%;padding-top: -10px; height: 480px;background-image:url('{{  asset("img/slider_team.png") }}');">
+    </div> 
+{%   endblock %}
+{%  block contenido_top %}
+{% endblock %}
+
+{%  block contenido_mid %}
+<div class="row">
+    <ul class="breadcrumb" style="background-color: white; margin-left: 20px;">
+        <li ><a href="{{  path('home') }}">Home</a> <span class="divider">/</span></li>
+        <li ><a href="{{  path('team') }}">Team</a> <span class="divider">/</span></li>
+        <li class="active">{{ selected.nombre }}</li>
+    </ul> 
+</div>
+
+
+<div class="row">
+    <div class="span2">
+        
+
+{{   include("AppsSiteBundle:Menu:left.team.html.twig", {'personal':personal }) }}
+
+
+    </div>
+
+    <div class="span10" style="margin-left: 0px;">
+        <div class="row-fluid" style="margin-left: 50px; padding-top: 10px;">
+        <label id="nombre_team" class="menu-productos" style="font-size: 30px;color: #006dcc">{{  selected.nombre }}</label>
+        </div>
+        <div class="row-fluid" style="margin-left: 50px; padding-top: 10px;">
+            <div class="span6">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                      <ul class="nav cat-nav">
+                        <li ><a href="{{  path('descripcion_team', {'id_persona': selected.id }) }}">PERFIL</a></li>
+                        <li class="active" ><a href="{{  path('entrevista_team' , { 'id_persona': selected.id  }) }}"  >ENTREVISTA</a></li>
+                       
+                      </ul>
+                    </div>
+                 </div>
+                  
+                <div class="well">
+                    
+                    {% for pregunta in selected.entrevista %}
+                    
+                    <label style="font-weight: bold"> {{ pregunta.pregunta }} </label>
+                    <label id="estatura"> {{ pregunta.respuesta }}</label>
+                    
+                    <br/>
+                    <br/>
+                    {% endfor  %}
+                   
+                </div>
+            </div>
+            <div class="span5 offset1">
+                <div style="margin-top: 65px;width: 213px;height: 284px; ">
+                    <img style="width:100%; height: 100%; " src="{{  asset('uploads/personal/' ~ selected.imagen ) }}" />
+                </div>
+            </div>
+        </div>
+
+         
+    </div>
+</div>
+<br/>
+{% endblock %}
+
+{%  block contenido_bottom %}
+{%  endblock %}

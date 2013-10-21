@@ -1,0 +1,32 @@
+{%  extends "AppsSiteBundle:Template:template.html.twig" %}
+{%   block carrousel  %}
+    <div style="width: 100%;padding-top: -10px; height: 480px;background-image:url('../img/slider_quienes.png');">
+    </div> 
+{%   endblock %}
+{%  block contenido_top %}
+{% endblock %}
+
+{%  block contenido_mid %}
+<div class="row">
+    <ul class="breadcrumb" style="background-color: white; margin-left: 20px;">
+        <li ><a href="#">Home</a> <span class="divider">/</span></li>
+        <li class="active">Quienes Somos</li>
+    </ul> 
+</div>
+
+<div class="row">
+    <div class="span8" style="margin-left: 0px;">
+        <div class="row-fluid" style="margin-left: 30px; padding-top: 10px;">
+            <label id="nombre_team" class="menu-productos" style="font-size: 30px;color: #006dcc">QUIENES SOMOS</label>
+             <label class="label_subtitulo" style="margin-left: 0px;margin-top:20px" id="nombre_foto">CREDO SUMBAWA</label>                
+             <p>Vestir y equipar a los segmentos más vanguardistas de la población juvenil y adulta contagiándolos de un estilo de vida fresco y relajado expresado a través de tiendas con ambientes, servicios y productos preminum.</p>
+             <p>"Sumbawa es la primera cadena especializada en moda, accesorios de surf, skate entre otros."</p>
+             <p>MANOLO LOZANO.</p>
+        </div>        
+    </div>
+</div>
+<br/>
+{% endblock %}
+
+{%  block contenido_bottom %}
+{%  endblock %}

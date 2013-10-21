@@ -1,0 +1,49 @@
+
+a.breadcumb-link{
+    color: gray !important;
+}
+
+.producto-nombre{
+    font-family: fon_banner;
+    font-weight: normal;
+    font-size: 30px;
+    color: #1b3f95;
+}
+
+.producto-descripcion{
+    font-family: arial;
+    font-size: 14px;
+    color:#333333;
+}
+
+.menu-productos{
+    letter-spacing: 1.1px;
+}
+
+.colorbox{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border:1px solid gray ;   
+    margin: 5px;
+}
+
+.boton-agregar-carrito{
+    text-shadow: none;
+}
+
+#producto-wrap{
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid gray ; 
+}
+
+
+#map-canvas{
+    width: 100%;
+}
+
+#noticias-wrap{
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+}

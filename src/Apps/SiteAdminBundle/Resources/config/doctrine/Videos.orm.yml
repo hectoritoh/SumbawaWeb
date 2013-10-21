@@ -1,0 +1,33 @@
+Apps\SiteAdminBundle\Entity\Videos:
+    type: entity
+    table: videos
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        titulo:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+        link:
+            type: text
+            nullable: true
+        descripcion:
+            type: text
+            nullable: true
+        created:
+            type: datetime
+            nullable: true
+        updated:
+            type: datetime
+            nullable: true
+        estado:
+            type: integer
+            unsigned: false
+            nullable: true
+    lifecycleCallbacks: {  }

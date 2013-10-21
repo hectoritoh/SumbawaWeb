@@ -1,0 +1,57 @@
+Apps\SiteAdminBundle\Entity\Tienda:
+    type: entity
+    table: tienda
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        nombre:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+        direccion:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+        telefono:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+        email:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+        atencion:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+        created:
+            type: datetime
+            nullable: true
+        updated:
+            type: datetime
+            nullable: true
+        estado:
+            type: integer
+            unsigned: false
+            nullable: true
+        latitud:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+        longuitud:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+    lifecycleCallbacks: {  }

@@ -1,0 +1,146 @@
+{%  extends "AppsSiteBundle:Template:template.html.twig" %}
+
+  {%  block contenido_top %}
+
+
+  {% endblock %}
+
+  {%  block carrousel %}
+    
+                            
+  {% endblock %}
+
+  {%  block contenido_mid %}
+<label style="font-family: fon_banner !important;font-size: 32px;color: #006dcc; margin-bottom: 0px;width: 60%;">DETALLE DEL PAGO</label>
+<div style="padding: 10px 10px 0px 0px">
+    <ul class="nav nav-pills">
+        <li ><a href="#">DESCRIPCION DEL ENVIO</a></li>
+        <li ><a href="#">PAGO</a></li>
+        <li ><a href="#">LISTO</a></li>
+    </ul>
+</div>
+
+    <div class="row">
+        
+        <div class="span10">                
+            <div class="row" style="margin-left: 20px;">
+                
+                <div class="span7 pull-left" style="text-align:center;margin-left: 0px;position: relative;margin-top: 0px;">
+                    
+
+                        <form class="form-horizontal span6">
+                            <fieldset>
+
+                                <!-- Form Name -->
+                                <legend>Descripcion del Envio</legend>
+
+                                <!-- Text input-->
+                                <div class="control-group">
+                                    <label class="control-label" style="font-weight: bold">Nombre</label>
+                                    <div class="controls">
+                                        <input id="textinput" name="textinput" type="text"  class="input-xlarge">
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="control-group">
+                                    <label class="control-label" style="font-weight: bold">Calle</label>
+                                    <div class="controls">
+                                        <input id="textinput" name="textinput" type="text" class="input-xlarge">
+                                       
+                                    </div>
+                                </div>
+                                
+                                 <!-- Text input-->
+                                <div class="control-group">
+                                    <label class="control-label" style="font-weight: bold">Departamento</label>
+                                    <div class="controls">
+                                        <input id="textinput" name="textinput" type="text" class="input-xlarge">
+                                       
+                                    </div>
+                                </div>
+
+                                <!-- Select Basic -->
+                                <div class="control-group">
+                                    <label class="control-label" style="font-weight: bold">Ciudad</label>
+                                    <div class="controls">
+                                        <select id="selectbasic" name="selectbasic" class="input-xlarge">
+                                            <option>Guayas</option>
+                                            <option>Pichincha</option>
+                                        </select>
+                                    </div>
+                                </div> 
+                                
+                                <!-- Select Basic -->
+                                <div class="control-group">
+                                    <label class="control-label" style="font-weight: bold">Provincia</label>
+                                    <div class="controls">
+                                        <select id="selectbasic" name="selectbasic" class="input-xlarge">
+                                            <option>Guayaquil</option>
+                                            <option>Quito</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="control-group">
+                                    <label class="control-label" style="font-weight: bold">Region</label>
+                                    <div class="controls">
+                                        <input id="textinput" name="textinput" type="text" class="input-xlarge">
+                                       
+                                    </div>
+                                </div>
+                                
+                                 <!-- Text input-->
+                                <div class="control-group">
+                                    <label class="control-label" style="font-weight: bold">Codigo Postal</label>
+                                    <div class="controls">
+                                        <input id="textinput" name="textinput" type="text" class="input-xlarge">
+                                       
+                                    </div>
+                                </div>
+                                 
+                                <!-- Button -->
+                                    <div class="form-actions">
+                                        <button id="singlebutton" name="singlebutton" class="btn btn-primary pull-right">Guardar</button>
+                                    </div>
+
+                            </fieldset>
+                        </form>
+                    
+                </div>
+                
+                <!-- panel derecho del carrito -->
+                <div class="span2 offset6" style="width: 245px; height:100%;position: absolute; padding-left: 0px; left: 288px; margin-left: 600px;"> 
+                        
+                    <div class="span7" style="margin-left: 0px;width:100%;z-index: 1">
+                        <div style="width: 250px;padding-top: 0px; height: 15px;background-image:url('../img/separador.png');background-repeat:repeat-x;">
+                        </div> 
+                        <!--fila de producto en carrito-->
+                        {%  include 'AppsSiteBundle:Template:item_direcciones.html.twig' %}
+
+                        <!--fila de producto en carrito-->
+                        {%  include 'AppsSiteBundle:Template:item_direcciones.html.twig' %}
+                        
+                    </div>
+                        <div class="span7" style="margin-left: 0px;z-index: 1">
+                            <br/><br/>
+                            <div style="width: 250px;padding-top: 0px; height: 15px;background-image:url('../img/separador.png');background-repeat:repeat-x;">
+                            </div>
+                        </div>                  
+                    
+                </div><!--/span-->
+            </div>
+
+                <br/>
+                <hr style="width: 100%"/>
+        </div><!--/span-->
+    </div><!--/row-->
+
+{% endblock %}
+
+
+
+{%  block contenido_bottom %}
+   
+{%  endblock %}

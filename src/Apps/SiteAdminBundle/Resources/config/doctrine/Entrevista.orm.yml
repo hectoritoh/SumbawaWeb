@@ -1,0 +1,41 @@
+Apps\SiteAdminBundle\Entity\Entrevista:
+    type: entity
+    table: entrevista
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        pregunta:
+            type: text
+            nullable: true
+        respuesta:
+            type: text
+            nullable: true
+        estado:
+            type: integer
+            unsigned: false
+            nullable: true
+        created:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+        updated:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+            
+    manyToOne:
+        personal:
+            targetEntity: Personal
+            cascade:      [persist]
+            inversedBy: entrevistas
+            joinColumns:
+                personal_id:
+                    referencedColumnName: id     
+    lifecycleCallbacks: {  }

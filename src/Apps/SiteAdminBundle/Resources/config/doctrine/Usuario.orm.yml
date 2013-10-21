@@ -1,0 +1,51 @@
+Apps\SiteAdminBundle\Entity\Usuario:
+    type: entity
+    table: usuario
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        nombre:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+        apellido:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+        genero:
+            type: integer
+            unsigned: false
+            nullable: true
+        email:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+        usuario:
+            type: string
+            length: 50
+            fixed: false
+            nullable: true
+        password:
+            type: string
+            length: 50
+            fixed: false
+            nullable: true
+        estado:
+            type: integer
+            unsigned: false
+            nullable: true
+        created:
+            type: datetime
+            nullable: true
+        updated:
+            type: datetime
+            nullable: true
+    lifecycleCallbacks: {  }

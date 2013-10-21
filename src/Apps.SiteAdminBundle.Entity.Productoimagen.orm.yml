@@ -1,0 +1,26 @@
+Apps\SiteAdminBundle\Entity\Productoimagen:
+    type: entity
+    table: productoimagen
+    fields:
+        id:
+            type: integer
+            nullable: false
+            id: true
+            generator:
+                strategy: IDENTITY
+        url:
+            type: text
+            nullable: true
+        created:
+            type: datetime
+            nullable: true
+        updated:
+            type: datetime
+            nullable: true
+        estado:
+            type: integer
+            nullable: true
+        descripcion:
+            type: text
+            nullable: true
+    lifecycleCallbacks: {  }

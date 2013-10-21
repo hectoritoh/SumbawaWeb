@@ -1,0 +1,149 @@
+{%  extends "AppsSiteBundle::layout.html.twig" %}
+
+  {%  block contenido_top %}
+
+
+  {% endblock %}
+
+  {%  block carrousel %}
+
+  {% endblock %}
+
+  {%  block contenido_mid %}
+
+<div class="row-fluid">
+
+    <div id="producto-wrap" class="span10 offset1" >
+
+
+        <div  class="row-fluid" >
+            <div  class="span12" >
+                <ul class="breadcrumb" style="background-color: white;padding-left: 0px;">
+                    <li>
+                        <a class="breadcumb-link" href="#">Home</a> 
+                        <span class="divider">></span>
+                    </li>
+                    <li>
+                        <a class="breadcumb-link" href="#">Productos</a> 
+                        <span class="divider">></span>
+                    </li>
+                    <li>
+                        <a class="breadcumb-link" href="{{  path("ver_subcategoria", {"id_subcategoria": producto.subcategoria.id }) }}">{{  producto.subcategoria.nombre }}</a> 
+                        <span class="divider">/</span></li>
+                        <li class="active">{{  producto.nombre }}</li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div  class="row-fluid" >
+            <div  class="span8" >
+                <h3 class="producto-nombre"   id="nombre_producto"  >{{  producto.subcategoria.nombre }}</h3>                         
+            </div>
+
+        </div>
+
+
+
+        <div  class="row-fluid" >
+            <div  class="span7" >
+                <label class="menu-productos" >{{  producto.nombre }}</label>
+            </div>
+            <div  class="span2 offset1" >
+                <label class="menu-productos" >DATOS DEL PRODUCTO</label>
+            </div>
+        </div>
+
+
+        <div  class="row-fluid" >
+            
+            <div  class="span7" >
+                <div id="home_carousel" class="carousel slide" style="margin-bottom: 0px;width: 100%;">
+
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+
+                            {%  for imagen  in producto.imagenes %}
+
+                        <div   style="width: 100%;" class=" {% if loop.first %}active{%  endif %} item">
+                            <img style="width: 100%;" src="{{ asset('uploads/prod_images/' ~ imagen.url ) }}" alt="" />                  
+                        </div>
+                            {%  endfor  %}
+                    </div>
+
+                    <a class="carousel-control left" href="#home_carousel" data-slide="prev">&lsaquo;</a>
+                    <a class="carousel-control right" href="#home_carousel" data-slide="next">&rsaquo;</a>
+                </div>
+                <p  class="producto-descripcion" style="margin-top: 30px;" >
+                            {{  producto.descripcion }}
+                </p>
+            </div>
+            
+            <div  class="span2 offset1" >
+                <div class="barra" ></div>
+
+
+
+                <label class="precio" id="precio" style="margin-top: 30px;"><b>${{  producto.precio }}</b></label>
+                <label style="font-size: 15px;font-family: Arial !important;margin-bottom: 30px;"><b>incluido IVA</b></label>
+
+
+                <label style="font-size: 15px;font-family: Arial !important; margin-bottom: 0px;">
+                    <b>Disponibilidad ({{  producto.stock }}) :</b>
+                </label>
+
+                <label style="font-size: 15px;font-family: Arial !important;margin-bottom: 30px;" id="disponibilidad">{% if  producto.stock == 0  %}No existencia{% else %}En existencia{%endif%} </label>
+
+                <label style="font-size: 15px;font-family: Arial !important; margin-bottom: 0px;"><b>Colores:</b></label>
+               
+                <div>
+                    <div  class="colorbox" style="background-color:{{ producto.color1 }} "  ></div>
+                    <div  class="colorbox" style="background-color:{{ producto.color2 }} "  ></div>
+                </div>
+                
+
+
+
+
+                <a href="#" class="btn boton-agregar-carrito">AÑADIR AL CARRITO DE COMPRAS <img src="{{ asset('img/cart.png') }}"/></a>
+                <a href="#" style="margin-top: 10px">Añadir a la lista de deseos </a>
+
+                <div class="row-fluid">           
+                    <div class="span2" style="width: 100%">
+                        <label id="num_visitas_favoritos" style="font-size: 15px;font-family: Arial !important; color: #CCCCCC">12384 visitas - 532 favoritos</label>
+                    </div>
+                </div>
+
+                <div class="row">           
+                    <div class="span2" style="width: 100%">
+                        <!-- pilas aqui la parte de SHARE con FB y TW -->   
+                    </div>
+                </div>
+                <div class="span7" style="margin-left: 0px">
+                    <br/><br/>
+                    <div style="width: 250px;padding-top: 0px; height: 15px;background-image:url('{{  asset('img/separador.png') }}');background-repeat:repeat-x;">
+                    </div> 
+                </div>
+
+            </div>
+        </div>
+
+
+ 
+
+    </div>
+</div><!--/row-->
+
+{% endblock %}
+
+
+
+{%  block contenido_bottom %}
+
+
+
+<div class="site-noticias" >
+       {{ render(controller('AppsSiteBundle:Site:productos')) }}
+</div>
+{%  endblock %}

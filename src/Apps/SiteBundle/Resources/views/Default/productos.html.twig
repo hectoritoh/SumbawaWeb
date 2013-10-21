@@ -1,0 +1,100 @@
+{%  extends "AppsSiteBundle::layout.html.twig" %}
+
+  {%  block contenido_top %}
+  {% endblock %}
+
+{%  block contenido_mid %}
+
+
+
+<div class="row-fluid" style="margin-bottom: 40px;" >
+  <div class="span10 offset1">
+    <div class="row-fluid">
+    <div class="span2">
+        <div class="barra" ></div> 
+        
+        
+        <div class="sidebar-nav">
+            <ul class="nav nav-list">                
+                {%   for cat in categorias  %}                                
+                <li class="nav-header menu-productos">{{   cat.name }}</li>
+                    {%   for subcat in cat.subcategorias  %}
+                        <li class="submenu-productos">
+                            <a  class="{% if subcat.id == selected.id  %}  submenu-item-active {% endif %} submenu-item"    href="{{  path('ver_subcategoria', {'id_subcategoria' : subcat.id }) }}" >{{  subcat.nombre }}</a>
+                        </li>
+                    {%   endfor %}                
+                {%  endfor  %}                
+            </ul>
+        </div><!--/.well -->
+     <div class="barra" ></div> 
+    </div><!--/span-->
+    <div class="span10">
+        <div class="row-fluid">
+            <div class="span10" style="width: 100%">
+                <form class="form-inline">
+                    <p class="menu-productos-titulo" >{{   selected.nombre }}</p>
+                    <select>
+                        <option>Por Precio</option>
+                    </select>
+                    <select>
+                        <option>Ver todas las tallas</option>
+                    </select>
+                    <select>
+                        <option>Ver todos los colores</option>   
+                    </select>
+                    <button type="submit" class="btn btn-inverse">APLICAR</button>
+                </form>
+            </div>
+        </div>
+
+
+      {%  if productos | length < 4 %}
+
+
+        {{  include('AppsSiteBundle:Template:item_producto.html.twig'   , {'productos': productos | slice( 0 , 4  )  } ) }}
+
+            {% else %}
+
+      {%  for i in 0 .. productos | length / 4  %}
+
+        {{  include('AppsSiteBundle:Template:item_producto.html.twig'   , {'productos': productos | slice( i * 4 , 4  )  } ) }}
+
+       {% endfor %}
+
+            {% endif  %}
+
+            
+            <div class="span10" style="text-align: center; margin-left: 0px;  padding-bottom: 30px; padding-top: 30px;">
+                
+                
+                </div><br/>
+          
+    </div><!--/span-->
+</div><!--/row-->
+    
+  </div>
+</div>
+
+
+
+
+
+
+{% endblock %}
+
+
+
+{%  block contenido_bottom %}
+            <div class="row-fluid">
+              <div class="span10 offset1">
+                <div class="row-fluid">
+                    <div class="span4" ><img  style="width: 100%;"  src="{{ asset('img/ban1.png') }}"/></div>
+                  <div class="span4" ><img  style="width: 100%;" src="{{ asset('img/ban2.png') }}"/></div>
+                  <div class="span4" ><img  style="width: 100%;" src="{{ asset('img/ban3.png') }}"/></div>
+                </div>
+                <div class="row-fluid">
+                    <hr  class="separador-layout" />
+                </div>
+              </div>
+            </div>
+{%  endblock %}

@@ -1,0 +1,142 @@
+{%  extends "AppsSiteBundle::layout.html.twig" %}
+
+  {%  block contenido_top %}
+
+
+  {% endblock %}
+
+  {%  block carrousel %}
+
+  {% endblock %}
+
+  {%  block contenido_mid %}
+
+
+
+<div class="row-fluid"> 
+
+
+    <div class="span10 offset1" >
+
+
+        <div  class="row-fluid" >
+
+            <div class="span2" >
+                <div style="width: 150px;padding-top: 0px; height: 15px;background-image:url('{{  asset("img/separador.png")}} ');background-repeat:repeat-x;">
+                </div> 
+                <ul class="nav">
+                    <li class="divider"></li>                    
+                    <li>
+                        <a   class="nav-header menu-productos   selected_tienda "  href="{{  path("imagenes") }}" >IMAGENES</a>
+                    </li>
+                    <li>
+                        <a   class="nav-header menu-productos "  href="{{  path("videos") }}" >VIDEOS</a>
+                    </li>
+                    <li class="divider"></li>                    
+
+                </ul>
+                <div style="width: 150px;padding-top: 0px; height: 15px;background-image:url('{{  asset("img/separador.png")}} ');background-repeat:repeat-x;">
+                </div> 
+
+
+            </div>
+
+            <div class="span10">
+                <div class="area">
+                    <div class="row" style="margin-left: 20px">
+                        <label class="menu-productos" style="font-size: 30px;color: #006dcc">Imagenes</label>                        
+                    </div>
+
+                    <div class="row" style="margin-left: 20px;margin-top: 20px">
+                        <label class="span7 label_subtitulo" style="margin-left: 0px;" id="nombre_producto">{{  selected.titulo }}</label>                
+
+                    </div>
+                    <div class="row" style="margin-left: 20px">
+                        <div class="span7" style="margin-left: 0px;width: 90%;">
+                            <div style="width: 100%;padding-top: -10px; height: 445px;">
+
+                                <img style="height: 100%; width: 100%;" src="{{  asset("uploads/imagenes/" ~  selected.imagen ) }}" />
+
+                            </div> 
+                            <div class="span12" style="text-justify: auto;margin-left: 0px">
+
+                                <br/>
+                                <div class="fb_share pull-right">
+                                    <a href="https://twitter.com/share" class="twitter-share-button" data-via="sergio_chicho10" data-lang="es">Twittear</a>
+                                    <script>!function(d, s, id) {
+                                            var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                                            if (!d.getElementById(id)) {
+                                                js = d.createElement(s);
+                                                js.id = id;
+                                                js.src = p + '://platform.twitter.com/widgets.js';
+                                                fjs.parentNode.insertBefore(js, fjs);
+                                            }
+                                        }(document, 'script', 'twitter-wjs');</script>
+                                    <div style="float:right;margin-top:-2px;">
+                                        <b:if cond='data:post.isFirstPost'> 
+                                            <script>(function(d) {
+                                                    var js, id = 'facebook-jssdk';
+                                                    if (d.getElementById(id)) {
+                                                        return;
+                                                    }
+                                                    js = d.createElement('script');
+                                                    js.id = id;
+                                                    js.async = true;
+                                                    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                                                    d.getElementsByTagName('head')[0].appendChild(js);
+                                                }(document));</script>
+                                        </b:if> 
+                                        <fb:share-button expr:href='data:post.url' type='button_count'/>  
+                                    </div>
+
+                                </div>
+                                <br/>
+
+                            </div>
+                            <div class="span12" style="text-justify: auto;margin-left: 0px">
+                                <br/>
+
+                                <p>
+                                    {{  selected.descripcion }}
+                                </p>
+
+                            </div>
+
+
+                            <div id="fb-root"></div><script src="http://connect.facebook.net/es_CO/all.js#xfbml=1"></script> 
+                            <fb:comments href="<?php the_permalink() ?>" width="687"></fb:comments >
+                        </div> 
+                    </div>   
+                </div>                           
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+</div>
+
+{% endblock %}
+
+
+
+{%  block contenido_bottom %}
+<div class="row-fluid">
+    <div class="span10 offset1">
+        <div class="row-fluid">
+            <div class="span4" ><img  style="width: 100%;"  src="{{ asset('img/ban1.png') }}"/></div>
+            <div class="span4" ><img  style="width: 100%;" src="{{ asset('img/ban2.png') }}"/></div>
+            <div class="span4" ><img  style="width: 100%;" src="{{ asset('img/ban3.png') }}"/></div>
+        </div>
+        <div class="row-fluid">
+            <hr  class="separador-layout" />
+        </div>
+    </div>
+</div>
+{%  endblock %}

@@ -1,0 +1,50 @@
+Apps\SiteAdminBundle\Entity\Compra:
+    type: entity
+    table: compra
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        created:
+            type: datetime
+            nullable: true
+        updated:
+            type: datetime
+            nullable: true
+        estado:
+            type: integer
+            unsigned: false
+            nullable: true
+    manyToOne:
+        detallePago:
+            targetEntity: Detallepago
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                detalle_pago_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        detalleEnvio:
+            targetEntity: Detalleenvio
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                detalle_envio_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        usuario:
+            targetEntity: Usuario
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                usuario_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

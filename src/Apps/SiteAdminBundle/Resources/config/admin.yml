@@ -1,0 +1,158 @@
+services:
+  
+  sonata.admin.banner:
+    class: Apps\SiteAdminBundle\Admin\BannerAdmin
+    arguments: [null, Apps\SiteAdminBundle\Entity\Banner, 'SonataAdminBundle:CRUD']
+    calls:
+        - [setTranslationDomain, [AppsAdminBundle]]
+    tags:
+        - { name: sonata.admin, manager_type: orm, group: Categoria, label: Banner }
+  
+  sonata.admin.noticias:
+    class: Apps\SiteAdminBundle\Admin\NoticiasAdmin
+    arguments: [null, Apps\SiteAdminBundle\Entity\Noticias, 'SonataAdminBundle:CRUD']
+    calls:
+        - [setTranslationDomain, [AppsAdminBundle]]
+    tags:
+        - { name: sonata.admin, manager_type: orm, group: Categoria, label: Noticias }
+
+  sonata.admin.categoria:
+    class: Apps\SiteAdminBundle\Admin\CategoriaAdmin
+    arguments: [null, Apps\SiteAdminBundle\Entity\Categoria, 'SonataAdminBundle:CRUD']
+    calls:
+        - [setTranslationDomain, [AppsAdminBundle]]
+    tags:
+        - { name: sonata.admin, manager_type: orm, group: Categoria, label: Categorias }
+
+  sonata.admin.subcategoria:
+    class: Apps\SiteAdminBundle\Admin\SubcategoriaAdmin
+    arguments: [null, Apps\SiteAdminBundle\Entity\Subcategoria, 'SonataAdminBundle:CRUD']
+    calls:
+        - [setTranslationDomain, [AppsAdminBundle]]
+    tags:
+        - { name: sonata.admin, manager_type: orm, group: Categoria, label: Subcategoria }
+
+  sonata.admin.tienda:
+    class: Apps\SiteAdminBundle\Admin\TiendaAdmin
+    arguments: [null, Apps\SiteAdminBundle\Entity\Tienda, 'SonataAdminBundle:CRUD']
+    calls:
+        - [setTranslationDomain, [AppsAdminBundle]]
+    tags:
+        - { name: sonata.admin, manager_type: orm, group: Categoria, label: Tienda }
+
+
+  sonata.admin.producto:
+    class: Apps\SiteAdminBundle\Admin\ProductoAdmin
+    arguments: [null, Apps\SiteAdminBundle\Entity\Producto, 'SonataAdminBundle:CRUD']
+    calls:
+        - [setTranslationDomain, [AppsAdminBundle]]
+    tags:
+        - { name: sonata.admin, manager_type: orm, group: Categoria, label: Productos }
+
+
+ 
+
+
+  sonata.admin.contenido:
+    class: Apps\SiteAdminBundle\Admin\ContenidoAdmin
+    arguments: [null, Apps\SiteAdminBundle\Entity\Contenido, 'SonataAdminBundle:CRUD']
+    calls:
+        - [setTranslationDomain, [AppsAdminBundle]]
+    tags:
+        - { name: sonata.admin, manager_type: orm, group: Sitio, label: Contenido }
+
+
+  sonata.admin.personal:
+    class: Apps\SiteAdminBundle\Admin\PersonalAdmin
+    arguments: [null, Apps\SiteAdminBundle\Entity\Personal, 'SonataAdminBundle:CRUD']
+    calls:
+        - [setTranslationDomain, [AppsAdminBundle]]
+    tags:
+        - { name: sonata.admin, manager_type: orm, group: Sitio, label: Personal }
+
+
+ 
+        
+        
+  sonata.admin.usuario:
+    class: Apps\SiteAdminBundle\Admin\UsuarioAdmin
+    arguments: [null, Apps\SiteAdminBundle\Entity\Usuario, 'SonataAdminBundle:CRUD']
+    calls:
+        - [setTranslationDomain, [AppsAdminBundle]]
+    tags:
+        - { name: sonata.admin, manager_type: orm, group: Usuario, label: Usuario }
+
+        
+  sonata.admin.entrevista:
+    class: Apps\SiteAdminBundle\Admin\EntrevistaAdmin
+    arguments: [null, Apps\SiteAdminBundle\Entity\Entrevista, 'SonataAdminBundle:CRUD']
+    calls:
+        - [setTranslationDomain, [AppsAdminBundle]]
+    tags:
+        - { name: sonata.admin, manager_type: orm, group: Usuario, label: Entrevista }
+        
+        
+  sonata.admin.rol:
+    class: Apps\SiteAdminBundle\Admin\RolAdmin
+    arguments: [null, Apps\SiteAdminBundle\Entity\Rol, 'SonataAdminBundle:CRUD']
+    calls:
+        - [setTranslationDomain, [AppsAdminBundle]]
+    tags:
+        - { name: sonata.admin, manager_type: orm, group: Seguridad, label: Roles}
+        
+        
+ 
+
+
+        
+  sonata.admin.imagenes:
+    class: Apps\SiteAdminBundle\Admin\ImagenesAdmin
+    arguments: [null, Apps\SiteAdminBundle\Entity\Imagenes, 'SonataAdminBundle:CRUD']
+    calls:
+        - [setTranslationDomain, [AppsAdminBundle]]
+    tags:
+        - { name: sonata.admin, manager_type: orm, group: multimedia, label: Imagenes }
+        
+        
+  sonata.admin.productos.imagenes:
+    class: Apps\SiteAdminBundle\Admin\productoImagenesAdmin
+    arguments: [null, Apps\SiteAdminBundle\Entity\ProductoImagen, 'SonataAdminBundle:CRUD']
+    calls:
+        - [setTranslationDomain, [AppsAdminBundle]]
+    tags:
+        - { name: sonata.admin, manager_type: orm, group: multimedia, label: ImagenesProductos }
+        
+
+
+  sonata.admin.imagenesPersonal:
+    class: Apps\SiteAdminBundle\Admin\ImagenesPersonalAdmin
+    arguments: [null, Apps\SiteAdminBundle\Entity\ImagenesPersonal, 'SonataAdminBundle:CRUD']
+    calls:
+        - [setTranslationDomain, [AppsAdminBundle]]
+    tags:
+        - { name: sonata.admin, manager_type: orm, group: multimedia, label: ImagenesPersonal }
+
+
+  sonata.admin.videosPersonal:
+    class: Apps\SiteAdminBundle\Admin\VideosPersonalAdmin
+    arguments: [null, Apps\SiteAdminBundle\Entity\VideosPersonal, 'SonataAdminBundle:CRUD']
+    calls:
+        - [setTranslationDomain, [AppsAdminBundle]]
+    tags:
+        - { name: sonata.admin, manager_type: orm, group: multimedia, label: VideosPersonal }
+
+    
+        
+
+
+
+        
+  sonata.admin.videos:
+    class: Apps\SiteAdminBundle\Admin\VideosAdmin
+    arguments: [null, Apps\SiteAdminBundle\Entity\Videos, 'SonataAdminBundle:CRUD']
+    calls:
+        - [setTranslationDomain, [AppsAdminBundle]]
+    tags:
+        - { name: sonata.admin, manager_type: orm, group: multimedia, label: Videos }
+
+        

@@ -1,0 +1,20 @@
+<div class="row-fluid">
+    <h3 class="offset1 span_subtitulos_contenido">PRODUCTOS</h3>
+</div>
+
+<div  class="row-fluid" >  
+    <div  class="span1" >
+    </div>
+
+ {%  for cat in categorias  %}
+    <div class="span2" >        
+        <a href="#" >
+            <img style="width: 100%;" src="{{ asset('uploads/categorias/'  ~ cat.imagen ) }}"/>
+            <p href="#" style="text-align: center;" class="link-submenu_productos">
+                {{cat.name}}</p>
+        </a>          
+    </div>
+{%  endfor  %}
+    <div class="span1" >    
+    </div>
+</div>

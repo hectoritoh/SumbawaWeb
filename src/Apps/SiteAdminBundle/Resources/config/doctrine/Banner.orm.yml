@@ -1,0 +1,38 @@
+Apps\SiteAdminBundle\Entity\Banner:
+    type: entity
+    table: banner
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        imagen:
+            type: text
+            nullable: true
+        descripcion:
+            type: text
+            nullable: true
+        titulo:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+        link:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+        estado:
+            type: integer
+            unsigned: false
+            nullable: true
+        created:
+            type: datetime
+            nullable: true
+        updated:
+            type: datetime
+            nullable: true
+    lifecycleCallbacks: {  }

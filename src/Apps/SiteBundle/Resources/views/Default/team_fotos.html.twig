@@ -1,0 +1,77 @@
+{%  extends "AppsSiteBundle::layout.html.twig" %}
+{%   block carrousel  %}
+    <div style="width: 100%;padding-top: -10px; height: 480px;background-image:url('../img/slider_team.png');">
+    </div> 
+{%   endblock %}
+{%  block contenido_top %}
+{% endblock %}
+
+{%  block contenido_mid %}
+<div class="row">
+    <ul class="breadcrumb" style="background-color: white; margin-left: 20px;">
+        <li ><a href="#">Home</a> <span class="divider">/</span></li>
+        <li ><a href="#">Team</a> <span class="divider">/</span></li>
+        <li class="active">Sebastian Santos</li>
+    </ul> 
+</div>
+
+<div class="row">
+    <div class="span2">
+        <div class="sidebar-nav">
+            <div style="width: 100%;padding-top: 0px; height: 15px;background-image:url('../img/separador.png');background-repeat:repeat-x;"></div> 
+            <ul class="nav nav-list" >                
+                <li class="nav-header menu-productos">SURF</li>
+                <li class="submenu-productos active"><a href="#">SEBASTIAN SANTOS</a></li>
+                <li class="submenu-productos"><a href="#">DOMENIC BARAHONA</a></li>
+                <li class="submenu-productos"><a href="#">CARLOS GONCALVEZ</a></li>
+                <li class="submenu-productos"><a href="#">JONATHAN CHILA</a></li>
+                <li class="submenu-productos"><a href="#">ISRAEL BARONA</a></li>
+                <li class="submenu-productos"><a href="#">DIEGO VARGAS</a></li>
+                <li class="submenu-productos"><a href="#">MARCOS GONCALVEZ</a></li>
+                <li class="submenu-productos"><a href="#">AURELIO PRIETO</a></li>
+                <li class="submenu-productos"><a href="#">LUIS FELIPE RODRIGUEZ</a></li>        
+                <li class="nav-header  menu-productos">SKATE</li>
+            </ul>
+            <div style="width: 100%;padding-top: 0px; height: 15px;background-image:url('../img/separador.png');background-repeat:repeat-x;"></div> 
+        </div>
+    </div>
+
+    <div class="span10" style="margin-left: 0px;">
+        <div class="row-fluid" style="margin-left: 50px; padding-top: 10px;">
+        <label id="nombre_team" class="menu-productos" style="font-size: 30px;color: #006dcc">SEBASTIAN SANTOS</label>
+        </div>
+        <div class="row-fluid" style="margin-left: 50px; padding-top: 10px;">
+            <div class="span6">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                      <ul class="nav">
+                        <li><a href="#">PERFIL</a></li>
+                        <li><a href="#">ENTREVISTA</a></li>
+                        <li class="active"><a href="#">FOTOS</a></li>
+                        <li><a href="#">VIDEOS</a></li>
+                      </ul>
+                    </div>
+                 </div>
+                  
+                
+            </div>
+        </div>
+            
+            
+            <div style="margin-left: 50px; padding-top: 10px;">
+                    
+                   
+                {%  include 'AppsSiteBundle:Template:row_fotos_team.html.twig' %} 
+                    
+                {%  include 'AppsSiteBundle:Template:row_fotos_team.html.twig' %} 
+                    
+                    
+                </div>
+         
+    </div>
+</div>
+<br/>
+{% endblock %}
+
+{%  block contenido_bottom %}
+{%  endblock %}

@@ -1,0 +1,30 @@
+Apps\SiteAdminBundle\Entity\Imagenes:
+    type: entity
+    table: imagenes
+    fields:
+        id:
+            type: integer
+            nullable: false
+            id: true
+            generator:
+                strategy: IDENTITY
+        titulo:
+            type: string
+            length: 255
+            nullable: true
+        descripcion:
+            type: text
+            nullable: true
+        imagen:
+            type: text
+            nullable: true
+        created:
+            type: datetime
+            nullable: true
+        updated:
+            type: datetime
+            nullable: true
+        estado:
+            type: integer
+            nullable: true
+    lifecycleCallbacks: {  }

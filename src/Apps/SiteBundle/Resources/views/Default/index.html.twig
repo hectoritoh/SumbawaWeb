@@ -1,0 +1,61 @@
+{%  extends "AppsSiteBundle::layout.html.twig" %}
+
+{%  block contenido_top %}
+<div class="row-fluid">
+  <div class="span10 offset1">
+    <div class="row-fluid">
+        <div class="span4" ><img  style="width: 100%;"  src="{{ asset('img/ban1.png') }}"/></div>
+      <div class="span4" ><img  style="width: 100%;" src="{{ asset('img/ban2.png') }}"/></div>
+      <div class="span4" >
+         <a href="http://webservices.zapto.org:8085/sumbawa/oportunidad-laboral.php" >
+          <img  style="width: 100%;" src="{{ asset('img/ban3.png') }}"/></div>
+         </a>
+
+    </div>
+    <div class="row-fluid">
+        <hr  class="separador-layout" />
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{%  block contenido_mid %}
+
+
+
+<div class="site-noticias" >
+ {{ render(controller('AppsSiteBundle:Site:productos')) }}
+</div>
+
+{% endblock %}
+
+
+
+
+
+{%  block contenido_bottom %}
+
+
+<div class="row-fluid">
+  <div class="span10 offset1">
+     <hr  class="separador-layout" />
+  </div>
+</div>
+<div class="row-fluid">
+  <div class="span10 offset1">
+      <h3 class="span10  span_subtitulos_contenido">NOTICIAS</h3>
+  </div>
+</div>
+
+<div class="row-fluid">
+  <div class="span10 offset1">
+    <div class="row-fluid">
+        {{ render(controller('AppsSiteBundle:Site:noticias')) }}
+    </div>    
+  </div>
+</div>
+
+
+
+ 
+{%  endblock %}

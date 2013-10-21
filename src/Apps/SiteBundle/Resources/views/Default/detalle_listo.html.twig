@@ -1,0 +1,53 @@
+
+
+{%  extends "AppsSiteBundle:Template:template.html.twig" %}
+
+  {%  block contenido_top %}
+
+
+  {% endblock %}
+
+  {%  block carrousel %}
+    
+                            
+  {% endblock %}
+
+  {%  block contenido_mid %}
+<label style="font-family: fon_banner !important;font-size: 32px;color: #006dcc; margin-bottom: 0px;width: 60%;">DETALLE DEL PAGO</label>
+<div style="padding: 10px 10px 0px 0px">
+    <ul class="nav nav-pills">
+        <li ><a href="#">DESCRIPCION DEL ENVIO</a></li>
+        <li ><a href="#">PAGO</a></li>
+        <li ><a href="#">LISTO</a></li>
+    </ul>
+</div>
+
+    <div class="row">
+        
+        <div class="span10">                
+            <div class="row" style="margin-left: 20px;">
+                <div class="hero-unit center"  style="text-align: center">
+                    <h1 style="font-family: fon_banner !important;color: #006dcc;">GRACIAS POR SU COMPRA</h1>
+                    <br />
+                    <p class="label_subtitulo">USTED HA ADQUIRIDO "CAMISA VOLCOM" Y SU COMPRA SERAN ENVIADOS A LA SIGUIENTE DIRECCION</p>
+                    
+                    <!--fila de items que fueron comprados en el carrito-->
+                        {%  include 'AppsSiteBundle:Template:item_comprados.html.twig' %}
+
+
+                    <a href="#" class="btn btn-large btn-primary" style="font-family: fon_banner !important;">REGRESAR AL HOME</a>
+                  </div>
+            </div>
+
+                <br/>
+                <hr style="width: 100%"/>
+        </div><!--/span-->
+    </div><!--/row-->
+
+{% endblock %}
+
+
+
+{%  block contenido_bottom %}
+   
+{%  endblock %}

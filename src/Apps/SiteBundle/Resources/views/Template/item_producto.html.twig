@@ -1,0 +1,17 @@
+
+
+
+<div class="row-fluid">
+    {%  for producto in productos  %}
+    
+    <div class="span3">
+        <a  href="{{  path("descripcion_producto", {'id_producto': producto.id}) }}" >
+        <img src="{{ asset('uploads/prod_images/'~ producto.imagenes[0].url  ) }}"/>
+        <h5 style="margin:0px;">{{  producto.nombre }}</h5>
+        <p>${{ producto.precio }}</p>
+        </a>
+    </div><!--/span-->
+    
+    {%  endfor  %}
+    
+</div>

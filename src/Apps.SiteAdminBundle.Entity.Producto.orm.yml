@@ -1,0 +1,54 @@
+Apps\SiteAdminBundle\Entity\Producto:
+    type: entity
+    table: producto
+    fields:
+        id:
+            type: integer
+            nullable: false
+            id: true
+            generator:
+                strategy: IDENTITY
+        nombre:
+            type: string
+            length: 255
+            nullable: true
+        descripcion:
+            type: text
+            nullable: true
+        stock:
+            type: integer
+            nullable: true
+        precio:
+            type: float
+            nullable: true
+        created:
+            type: datetime
+            nullable: true
+        updated:
+            type: datetime
+            nullable: true
+        estado:
+            type: integer
+            nullable: true
+        visitas:
+            type: integer
+            nullable: true
+        color1:
+            type: string
+            length: 255
+            nullable: true
+        color2:
+            type: string
+            length: 255
+            nullable: true
+    manyToOne:
+        subcategoria:
+            targetEntity: Apps\SiteAdminBundle\Entity\Subcategoria
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                subcategoria_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

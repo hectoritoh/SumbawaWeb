@@ -1,0 +1,61 @@
+Apps\SiteAdminBundle\Entity\Personal:
+    type: entity
+    table: personal
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        nombre:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+        imagen:
+            type: text
+            nullable: true
+        apodo:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+        estatura:
+            type: float
+            nullable: true
+        sponsor:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+        anecdota:
+            type: text
+            nullable: true
+        edad:
+            type: integer
+            unsigned: false
+            nullable: true
+        extra1:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+        extra2:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+            
+    oneToMany:
+        entrevistas:
+            targetEntity: Entrevista
+            cascade: ["persist", "merge"]
+            mappedBy: personal
+            inversedBy: null
+            joinColumns:
+                personal_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

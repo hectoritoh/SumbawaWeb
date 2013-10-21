@@ -1,0 +1,96 @@
+<div class="navbar" id="top_submenu" >        
+    <div class="navbar-inner top-menu">
+        <div class="container-fluid">
+            <div  class="row-fluid" >
+                <div  class="span6 offset1"  >
+                    <div class="nav-collapse collapse "  style="padding-left: 25px;" >
+                        <ul class="nav ">
+                            <li class="normal_boton">
+                                <a class="link-submenu"  href="{{   path('home') }}"  >INICIO</a>
+                            </li>
+                            <li class="normal_boton dropdown">
+                                <a   id="productoDropdown" href="#" class="link-submenu dropdown-toggle" data-toggle="dropdown">PRODUCTOS</a>                               
+                            </li>
+                            <li class="normal_boton dropdown">
+                                <a href="#" class="link-submenu dropdown-toggle" data-toggle="dropdown">TIENDAS</a>                        
+                                <ul class="dropdown-menu">      
+                                    <li class="divider"></li>
+                          {# listar las tiendas registradas en la base s #}
+                            {%   for tienda in tiendas %}
+                                    <li>
+                                        <a href="{{ path("tiendas", {"id_tienda": tienda.id }) }}">{{  tienda.nombre }}</a>
+                                    </li>
+                                    <li class="divider"></li>
+                            {%   endfor %}               
+                                </ul>
+                            </li>
+                            <li class="normal_boton"><a class="link-submenu" href="{{  path("noticias") }}">NOTICIAS</a></li>
+                            <li class="normal_boton dropdown">
+                                <a href="#" class="link-submenu dropdown-toggle" data-toggle="dropdown">MEDIA</a>
+                                <div class="dropdown-menu" style="width: 330px;" >
+                                    <div class="row-fluid "  >
+                                        <div class="span5"  style="text-align: center;" >
+                                            <a href="{{  path("imagenes") }}" class="label_subtitulo_drop">
+                                                <img  style="margin: 10%;" src="{{ asset('img/foto.png') }}"/>IMAGENES</a>
+                                        </div>
+                                        <div class="span5 offset1"  style="text-align: center;" >
+                                            <a href="{{  path("videos") }}"  class="label_subtitulo_drop">
+                                                <img style="margin: 10%;" src="{{ asset('img/foto2.png') }}"/>VIDEOS</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>                                                   
+                            <li class="normal_boton"><a class="link-submenu" href="{{   path('team') }}">TEAM</a></li>
+                            <li class="normal_boton"><a class="link-submenu" href="{{   path('forecast') }}">FORECAST</a></li>
+                        </ul>
+                    </div>
+                </div> 
+                <div  class=" span4">
+                    <div class="input-append"   style="margin-left: -50px;"  >                        
+                        <input class="span2" id="inputIcon" type="text"  style="width: 90%;border-radius: 0px;margin-left: 35px;" />
+                        <span class="add-on"><i class="icon-search icon-white"></i></span>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div> 
+
+
+
+<div id="menu-productos" style="display: none;"    class="row-fluid hidden-phone hidden-tablet " >                                                                        
+    <div class="span9 offset1  submenu-container " >
+
+
+        <div id="menu-productos-content" class="row-fluid"  >
+            <div  class="span1" ></div>
+        {%  for cat in categorias  %}
+            <div class="span2 menu-prod-item-wrap {{  cat.name }}"  >
+                <ul class="categorias-list dropdown dropdown-menu-hover" onmouseout="ocultarCategoria({{  cat.id }});"  onmouseover="mostrarCategoria({{  cat.id }})"    style="list-style-type: none;text-align: center;">
+                    <li class="dropdown dropdown-hover"   >
+                        <a href="#" class="link-submenu_productos dropdown-toggle"  >
+                            <img class="categoria-img-thumb" src="{{ asset('uploads/categorias/'  ~ cat.imagen ) }}"/>{{cat.name}}
+                        </a>
+                        <div id="{{  cat.id }}lista-cat" class="list-categorias "  style="display: none;"  >
+                            <ul class="subcategorias-list" >
+                                <li class="divider"></li>
+                        {%  for subcat in cat.subcategorias %}
+                                <li  class="submenu-item" >
+                                    <a class="submenu-item-link" href="{{  path('ver_subcategoria', {'id_subcategoria':subcat.id } ) }}">{{  subcat.nombre }}</a>
+                                </li>
+                                <li class="divider" ></li>
+                       {%  endfor  %}
+                            </ul>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        {%  endfor  %}
+
+        </div>                             
+    </div>                             
+
+
+
+</div>
