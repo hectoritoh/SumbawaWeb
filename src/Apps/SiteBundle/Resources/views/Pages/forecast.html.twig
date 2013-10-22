@@ -1,0 +1,173 @@
+{%  extends "AppsSiteBundle::layout.html.twig" %}
+{%   block carrousel  %}
+<div style="width: 100%;padding-top: -10px; height: 480px;background-image:url('../img/slider_forecast.png');background-size:100% 100%;">
+</div> 
+{%   endblock %}
+{%  block contenido_top %}
+{% endblock %}
+
+{%  block contenido_mid %}
+
+
+
+<div class="row-fluid" >
+
+    <div class="span10 offset1" >
+
+        <div class="row-fluid">
+            <div class="span2">
+                <div class="sidebar-nav">
+                    <div class="barra" ></div>
+                    <ul class="nav nav-list" >   
+                        <li class="submenu-productos active" onclick="setFocus(this , 1)" ><a >PLAYAS</a></li> 
+                        <li class="submenu-productos"  onclick="setFocus(this , 2 )" ><a >LA BAHIA(GUAYAS)</a></li> 
+                        <li class="submenu-productos "  onclick="setFocus(this , 3)" ><a >MONTAÑITA</a></li> 
+                        <li class="submenu-productos"  onclick="setFocus(this , 4)" ><a >ATACAMES</a></li> 
+                        <li class="submenu-productos"  onclick="setFocus(this , 5)" ><a >BOCANE DE COJIMIES</a></li> 
+                        <li class="submenu-productos"  onclick="setFocus(this , 6)" ><a >MURCIELAGO (MANTA)</a></li> 
+                        <li class="submenu-productos"  onclick="setFocus(this , 7)" ><a >MONPICHE</a></li> 
+                        <li class="submenu-productos"  onclick="setFocus(this , 8)" ><a >SAN MATEO</a></li> 
+                        <li class="submenu-productos"  onclick="setFocus(this , 9)" ><a >FAE</a></li> 
+                        <li class="submenu-productos"  onclick="setFocus(this , 10)" ><a >ENGABAO</a></li> 
+                        <li class="submenu-productos"  onclick="setFocus(this , 11)" ><a >CANOA</a></li> 
+                        <li class="submenu-productos"  onclick="setFocus(this , 12)" ><a >PUERTO CAYO</a></li>
+                    </ul>
+                    <div class="barra" ></div>
+                </div>
+            </div>
+
+            <div class="span10" style="margin-left: 0px;">
+                <div class="row-fluid" style="margin-left: 50px; padding-top: 10px;">
+                    <label id="nombre_team" class="menu-productos" style="font-size: 30px;color: #006dcc">MONTAÑITA</label>
+                </div>
+                <div class="row-fluid" style="margin-left: 50px; padding-top: 10px;">
+                    
+                    <div class="span6  forecast-block " id="fore1"  >
+                        <!-- This code is issued by Magicseaweed.com under license 1381358421_71381 for the website  only subject to terms and conditions
+         and this message being kept intact as part of the code. If you are not the license holder add this content to your website by registering at 
+         Magicseaweed.com. All copyrights retained by Metcentral Ltd and any attempt to modify or redistribute this code is prohibited. 
+         Please contact us for more information if required. -->
+                        <div style="width:400px;background:#fff"><script type="text/javascript" src="http://magicseaweed.com/syndicate/index.php?licenseKey=1381358421_71381"></script><p><div style="font-family:Arial, Helvetica, sans-serif;text-align:center;font-size:10px;color:#000;height:25px;"><a href="http://magicseaweed.com/Ecuador-Surf-Forecast/30/" style="color:#000;">Ecuador Surf Report and Forecast</a></div></p></div>
+                    </div>
+                    
+                    <div class="span6  forecast-block " style='display:none;' id="fore2"  >
+                        <!-- This code is issued by Magicseaweed.com under license 1381358421_71381 for the website  only subject to terms and conditions
+         and this message being kept intact as part of the code. If you are not the license holder add this content to your website by registering at 
+         Magicseaweed.com. All copyrights retained by Metcentral Ltd and any attempt to modify or redistribute this code is prohibited. 
+         Please contact us for more information if required. -->
+                        <div style="width:400px;background:#fff"><script type="text/javascript" src="http://magicseaweed.com/syndicate/index.php?licenseKey=1381358421_71381"></script><p><div style="font-family:Arial, Helvetica, sans-serif;text-align:center;font-size:10px;color:#000;height:25px;"><a href="http://magicseaweed.com/Ecuador-Surf-Forecast/30/" style="color:#000;">Ecuador Surf Report and Forecast</a></div></p></div>
+                    </div>
+                    
+                    <div class="span6  forecast-block " style='display:none;' id="fore3"  >
+                        <!-- This code is issued by Magicseaweed.com under license 1381358421_71381 for the website  only subject to terms and conditions
+         and this message being kept intact as part of the code. If you are not the license holder add this content to your website by registering at 
+         Magicseaweed.com. All copyrights retained by Metcentral Ltd and any attempt to modify or redistribute this code is prohibited. 
+         Please contact us for more information if required. -->
+                        <div style="width:400px;background:#fff"><script type="text/javascript" src="http://magicseaweed.com/syndicate/index.php?licenseKey=1381358421_71381"></script><p><div style="font-family:Arial, Helvetica, sans-serif;text-align:center;font-size:10px;color:#000;height:25px;"><a href="http://magicseaweed.com/Ecuador-Surf-Forecast/30/" style="color:#000;">Ecuador Surf Report and Forecast</a></div></p></div>
+                    </div>
+                    
+                    <div class="span6  forecast-block " style='display:none;' id="fore4"  >
+                        <!-- This code is issued by Magicseaweed.com under license 1381358421_71381 for the website  only subject to terms and conditions
+         and this message being kept intact as part of the code. If you are not the license holder add this content to your website by registering at 
+         Magicseaweed.com. All copyrights retained by Metcentral Ltd and any attempt to modify or redistribute this code is prohibited. 
+         Please contact us for more information if required. -->
+                        <div style="width:400px;background:#fff"><script type="text/javascript" src="http://magicseaweed.com/syndicate/index.php?licenseKey=1381358421_71381"></script><p><div style="font-family:Arial, Helvetica, sans-serif;text-align:center;font-size:10px;color:#000;height:25px;"><a href="http://magicseaweed.com/Ecuador-Surf-Forecast/30/" style="color:#000;">Ecuador Surf Report and Forecast</a></div></p></div>
+                    </div>
+                    
+                    <div class="span6  forecast-block " style='display:none;' id="fore5"  >
+                        <!-- This code is issued by Magicseaweed.com under license 1381358421_71381 for the website  only subject to terms and conditions
+         and this message being kept intact as part of the code. If you are not the license holder add this content to your website by registering at 
+         Magicseaweed.com. All copyrights retained by Metcentral Ltd and any attempt to modify or redistribute this code is prohibited. 
+         Please contact us for more information if required. -->
+                        <div style="width:400px;background:#fff"><script type="text/javascript" src="http://magicseaweed.com/syndicate/index.php?licenseKey=1381358421_71381"></script><p><div style="font-family:Arial, Helvetica, sans-serif;text-align:center;font-size:10px;color:#000;height:25px;"><a href="http://magicseaweed.com/Ecuador-Surf-Forecast/30/" style="color:#000;">Ecuador Surf Report and Forecast</a></div></p></div>
+                    </div>
+                    
+                    <div class="span6  forecast-block " style='display:none;' id="fore6"  >
+                        <!-- This code is issued by Magicseaweed.com under license 1381358421_71381 for the website  only subject to terms and conditions
+         and this message being kept intact as part of the code. If you are not the license holder add this content to your website by registering at 
+         Magicseaweed.com. All copyrights retained by Metcentral Ltd and any attempt to modify or redistribute this code is prohibited. 
+         Please contact us for more information if required. -->
+                        <div style="width:400px;background:#fff"><script type="text/javascript" src="http://magicseaweed.com/syndicate/index.php?licenseKey=1381358421_71381"></script><p><div style="font-family:Arial, Helvetica, sans-serif;text-align:center;font-size:10px;color:#000;height:25px;"><a href="http://magicseaweed.com/Ecuador-Surf-Forecast/30/" style="color:#000;">Ecuador Surf Report and Forecast</a></div></p></div>
+                    </div>
+                    
+                    <div class="span6  forecast-block " style='display:none;' id="fore7"  >
+                        <!-- This code is issued by Magicseaweed.com under license 1381358421_71381 for the website  only subject to terms and conditions
+         and this message being kept intact as part of the code. If you are not the license holder add this content to your website by registering at 
+         Magicseaweed.com. All copyrights retained by Metcentral Ltd and any attempt to modify or redistribute this code is prohibited. 
+         Please contact us for more information if required. -->
+                        <div style="width:400px;background:#fff"><script type="text/javascript" src="http://magicseaweed.com/syndicate/index.php?licenseKey=1381358421_71381"></script><p><div style="font-family:Arial, Helvetica, sans-serif;text-align:center;font-size:10px;color:#000;height:25px;"><a href="http://magicseaweed.com/Ecuador-Surf-Forecast/30/" style="color:#000;">Ecuador Surf Report and Forecast</a></div></p></div>
+                    </div>
+                    
+                    <div class="span6  forecast-block " style='display:none;' id="fore8"  >
+                        <!-- This code is issued by Magicseaweed.com under license 1381358421_71381 for the website  only subject to terms and conditions
+         and this message being kept intact as part of the code. If you are not the license holder add this content to your website by registering at 
+         Magicseaweed.com. All copyrights retained by Metcentral Ltd and any attempt to modify or redistribute this code is prohibited. 
+         Please contact us for more information if required. -->
+                        <div style="width:400px;background:#fff"><script type="text/javascript" src="http://magicseaweed.com/syndicate/index.php?licenseKey=1381358421_71381"></script><p><div style="font-family:Arial, Helvetica, sans-serif;text-align:center;font-size:10px;color:#000;height:25px;"><a href="http://magicseaweed.com/Ecuador-Surf-Forecast/30/" style="color:#000;">Ecuador Surf Report and Forecast</a></div></p></div>
+                    </div>
+                    
+                    <div class="span6  forecast-block " style='display:none;' id="fore9"  >
+                        <!-- This code is issued by Magicseaweed.com under license 1381358421_71381 for the website  only subject to terms and conditions
+         and this message being kept intact as part of the code. If you are not the license holder add this content to your website by registering at 
+         Magicseaweed.com. All copyrights retained by Metcentral Ltd and any attempt to modify or redistribute this code is prohibited. 
+         Please contact us for more information if required. -->
+                        <div style="width:400px;background:#fff"><script type="text/javascript" src="http://magicseaweed.com/syndicate/index.php?licenseKey=1381358421_71381"></script><p><div style="font-family:Arial, Helvetica, sans-serif;text-align:center;font-size:10px;color:#000;height:25px;"><a href="http://magicseaweed.com/Ecuador-Surf-Forecast/30/" style="color:#000;">Ecuador Surf Report and Forecast</a></div></p></div>
+                    </div>
+                    
+                    <div class="span6  forecast-block " style='display:none;' id="fore10"  >
+                        <!-- This code is issued by Magicseaweed.com under license 1381358421_71381 for the website  only subject to terms and conditions
+         and this message being kept intact as part of the code. If you are not the license holder add this content to your website by registering at 
+         Magicseaweed.com. All copyrights retained by Metcentral Ltd and any attempt to modify or redistribute this code is prohibited. 
+         Please contact us for more information if required. -->
+                        <div style="width:400px;background:#fff"><script type="text/javascript" src="http://magicseaweed.com/syndicate/index.php?licenseKey=1381358421_71381"></script><p><div style="font-family:Arial, Helvetica, sans-serif;text-align:center;font-size:10px;color:#000;height:25px;"><a href="http://magicseaweed.com/Ecuador-Surf-Forecast/30/" style="color:#000;">Ecuador Surf Report and Forecast</a></div></p></div>
+                    </div>
+                    
+                    <div class="span6  forecast-block " style='display:none;' id="fore11"  >
+                        <!-- This code is issued by Magicseaweed.com under license 1381358421_71381 for the website  only subject to terms and conditions
+         and this message being kept intact as part of the code. If you are not the license holder add this content to your website by registering at 
+         Magicseaweed.com. All copyrights retained by Metcentral Ltd and any attempt to modify or redistribute this code is prohibited. 
+         Please contact us for more information if required. -->
+                        <div style="width:400px;background:#fff"><script type="text/javascript" src="http://magicseaweed.com/syndicate/index.php?licenseKey=1381358421_71381"></script><p><div style="font-family:Arial, Helvetica, sans-serif;text-align:center;font-size:10px;color:#000;height:25px;"><a href="http://magicseaweed.com/Ecuador-Surf-Forecast/30/" style="color:#000;">Ecuador Surf Report and Forecast</a></div></p></div>
+                    </div>
+                    
+                    <div class="span6  forecast-block " style='display:none;' id="fore12"  >
+                        <!-- This code is issued by Magicseaweed.com under license 1381358421_71381 for the website  only subject to terms and conditions
+         and this message being kept intact as part of the code. If you are not the license holder add this content to your website by registering at 
+         Magicseaweed.com. All copyrights retained by Metcentral Ltd and any attempt to modify or redistribute this code is prohibited. 
+         Please contact us for more information if required. -->
+                        <div style="width:400px;background:#fff"><script type="text/javascript" src="http://magicseaweed.com/syndicate/index.php?licenseKey=1381358421_71381"></script><p><div style="font-family:Arial, Helvetica, sans-serif;text-align:center;font-size:10px;color:#000;height:25px;"><a href="http://magicseaweed.com/Ecuador-Surf-Forecast/30/" style="color:#000;">Ecuador Surf Report and Forecast</a></div></p></div>
+                    </div>
+                    
+                    <div class="span6  forecast-block " style='display:none;' id="fore13"  >
+                        <!-- This code is issued by Magicseaweed.com under license 1381358421_71381 for the website  only subject to terms and conditions
+         and this message being kept intact as part of the code. If you are not the license holder add this content to your website by registering at 
+         Magicseaweed.com. All copyrights retained by Metcentral Ltd and any attempt to modify or redistribute this code is prohibited. 
+         Please contact us for more information if required. -->
+                        <div style="width:400px;background:#fff"><script type="text/javascript" src="http://magicseaweed.com/syndicate/index.php?licenseKey=1381358421_71381"></script><p><div style="font-family:Arial, Helvetica, sans-serif;text-align:center;font-size:10px;color:#000;height:25px;"><a href="http://magicseaweed.com/Ecuador-Surf-Forecast/30/" style="color:#000;">Ecuador Surf Report and Forecast</a></div></p></div>
+                    </div>
+                    
+                     
+                    
+                    <div class="span6">
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+<br/>
+{% endblock %}
+
+{%  block contenido_bottom %}
+{%  endblock %}

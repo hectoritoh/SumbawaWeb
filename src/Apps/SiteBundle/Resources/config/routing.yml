@@ -26,9 +26,15 @@ descripcion_noticia:
     pattern:  /noticia/{id_noticia}
     defaults: { _controller: AppsSiteBundle:Default:descripcionNoticias }
 
+
 descripcion_producto:
     pattern:  /descripcion/{id_producto}
     defaults: { _controller: AppsSiteBundle:Default:descripcionProductos }
+
+
+producto:
+    pattern:  /productos
+    defaults: { _controller: AppsSiteBundle:Default:productos }
 
 
 

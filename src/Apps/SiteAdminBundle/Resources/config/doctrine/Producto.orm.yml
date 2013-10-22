@@ -60,7 +60,7 @@ Apps\SiteAdminBundle\Entity\Producto:
             orphanRemoval: false
     oneToMany:
         imagenes:
-            targetEntity: ProductoImagen
+            targetEntity: Productoimagen
             cascade: ["persist", "merge"]
             mappedBy: producto
             inversedBy: null

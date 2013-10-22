@@ -16,9 +16,9 @@ class SiteController extends Controller {
     }
 
     public function productosAction() {
-        $categorias = $this->getDoctrine()->getRepository("AppsSiteAdminBundle:Categoria")->findAll();
-        return $this->render('AppsSiteBundle:Block:productos.html.twig', array(
-                    "categorias" => $categorias
+        // $categorias = $this->getDoctrine()->getRepository("AppsSiteAdminBundle:Categoria")->findAll();
+        return $this->render('AppsSiteBundle:Block:productos_1.html.twig', array(
+                    // "categorias" => $categorias
         ));
     }
     
